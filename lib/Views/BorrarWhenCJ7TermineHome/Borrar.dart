@@ -1,4 +1,4 @@
-import 'package:do_to_fit_app/Views/Login/componentsLogin/bodyLogin.dart';
+// import 'package:do_to_fit_app/Views/Login/componentsLogin/bodyLogin.dart';
 import 'package:do_to_fit_app/Views/Login/login.dart';
 import 'package:do_to_fit_app/api/google_signin_api.dart';
 import 'package:flutter/material.dart';
