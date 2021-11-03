@@ -7,7 +7,8 @@
         {
             "name": "do_to_fit_app",
             "request": "launch",
-            "type": "dart"
+            "type": "dart",
+            //"args": ["--web-port", 5000] Esto no entiendo que es, parece que depende de algo que se encuentra en Android Studio. Lo que entiendo es para ejecutar la app desde web
         },
         {
             "name": "do_to_fit_app (profile mode)",

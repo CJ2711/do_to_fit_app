@@ -57,7 +57,7 @@ class BodyLogin extends StatelessWidget {
               FontAwesomeIcons.google,
               color: Colors.red,
             ),
-            label: Text('Sign Up with Google'),
+            label: Text('Inicio de sesión con Google'),
             onPressed: signIn,
           ),
           SizedBox(height: size.height * 0.03),
@@ -68,6 +68,15 @@ class BodyLogin extends StatelessWidget {
   }
 
   Future signIn() async {
-    await GoogleSignInApi.login();
+    final user = await GoogleSignInApi.login();
+
+    if (user == null) {
+      ScaffoldMessenger.of(context)
+        .showSnackBar(SnackBar(content: Text('Inicio de sesión fallido')))
+    } else {
+      Navigatot.of(context).pushReplacement(MaterialPageRoute(
+      builder: (context) => LoogedInPage(user: user),
+    ));
+    }    
   }
 }
