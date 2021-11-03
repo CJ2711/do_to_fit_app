@@ -1,4 +1,10 @@
+// import 'dart:js';
+
+import 'dart:js';
+
+import 'package:do_to_fit_app/Views/BorrarWhenCJ7TermineHome/Borrar.dart';
 import 'package:do_to_fit_app/Views/Login/componentsLogin/loginBC.dart';
+import 'package:do_to_fit_app/Views/Welcome/welcome.screen.dart';
 import 'package:do_to_fit_app/api/google_signin_api.dart';
 import 'package:do_to_fit_app/components/account_check.dart';
 import 'package:do_to_fit_app/components/rounded_button.dart';
@@ -17,6 +23,21 @@ class BodyLogin extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    Future signIn() async {
+      final user = await GoogleSignInApi.login();
+
+      if (user == null) {
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          content: Text('Inicio de sesión fallido'),
+        ));
+      } else {
+        Navigator.of(context).pushReplacement(MaterialPageRoute(
+          builder: (context) => BorrarCJ7(user: user), //ESTA ES LA VENTANA QUE SE ABRIRÍA INICIAR SESIÓN
+        ));
+      }
+    }
+
     Size size = MediaQuery.of(context).size;
     return LoginBC(
       child: Column(
@@ -67,16 +88,4 @@ class BodyLogin extends StatelessWidget {
     );
   }
 
-  Future signIn() async {
-    final user = await GoogleSignInApi.login();
-
-    if (user == null) {
-      ScaffoldMessenger.of(context)
-        .showSnackBar(SnackBar(content: Text('Inicio de sesión fallido')))
-    } else {
-      Navigatot.of(context).pushReplacement(MaterialPageRoute(
-      builder: (context) => LoogedInPage(user: user),
-    ));
-    }    
-  }
 }

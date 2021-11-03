@@ -44,9 +44,9 @@ android {
     signingConfigs {
         debug {
             keyAlias 'doToFitAndroidGoogle'
-            keyPassword 'android' //CREO QUE ESTA ES LA QUE SE PONDRÍA EN LA CONSOLA
+            keyPassword 'androidDoToFit'
             storeFile file('mykey.jks')
-            storePassword ' android'
+            storePassword 'androidDoToFit'
         }
     }
 
