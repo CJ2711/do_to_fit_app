@@ -19,6 +19,7 @@ class BorrarCJ7 extends StatelessWidget {
           actions: [
             TextButton(
               child: Text('Salir'),
+              style: TextButton.styleFrom(primary: Colors.white),
               onPressed: () async {
                 await GoogleSignInApi.logout();
 
