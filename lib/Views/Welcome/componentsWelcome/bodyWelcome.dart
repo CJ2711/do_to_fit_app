@@ -1,7 +1,6 @@
 import 'package:do_to_fit_app/Views/Login/login.dart';
 import 'package:do_to_fit_app/Views/Welcome/componentsWelcome/background.dart';
 import 'package:do_to_fit_app/components/rounded_button.dart';
-import 'package:do_to_fit_app/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
