@@ -18,8 +18,6 @@ class BodyLogin extends StatelessWidget {
   Widget build(BuildContext context) {
     Future signIn() async {
       final user = await GoogleSignInApi.login();
-      print('UUUUUSEEERRRR:');
-      print(user);
       if (user == null) {
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
           content: Text('Inicio de sesión fallido'),
