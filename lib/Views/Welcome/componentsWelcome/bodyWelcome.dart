@@ -40,7 +40,16 @@ class Body extends StatelessWidget {
             text: "REGISTRARSE",
             color: Colors.lightBlue.shade50,
             textColor: Colors.black,
-            press: () {},
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return LoginScreen();
+                  },
+                ),
+              );
+            },
           ),
         ],
       ),
