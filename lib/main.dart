@@ -1,7 +1,7 @@
 import 'package:do_to_fit_app/Views/Welcome/welcome.screen.dart';
 import 'package:do_to_fit_app/constants.dart';
 import 'package:flutter/material.dart';
-//import 'Views/login.dart';
+import 'Views/dashboard.dart';
 
 void main() => runApp(MyApp());
 
