@@ -29,31 +29,55 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          // leading: Image(image: ),
-          title: const Text('DoToFit'),
-          actions: <Widget>[
-            IconButton(
-              icon: const Icon(
-                Icons.person,
-                semanticLabel: 'Perfil',
-              ),
-              onPressed: () {
-                print('Boton Perfil');
-              },
+      appBar: AppBar(
+        // leading: Image(image: ),
+        title: const Text('DoToFit'),
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(
+              Icons.person,
+              semanticLabel: 'Perfil',
             ),
-            IconButton(
-              icon: const Icon(
-                Icons.menu,
-                semanticLabel: 'menu',
-              ),
-              onPressed: () {
-                print('Boton menu');
-              },
+            onPressed: () {
+              print('Boton Perfil');
+            },
+          ),
+          IconButton(
+            icon: const Icon(
+              Icons.menu,
+              semanticLabel: 'menu',
             ),
-          ],
-        ),
-        body: carousel.PlanCarousel(),
-        );
+            onPressed: () {
+              print('Boton menu');
+            },
+          ),
+        ],
+      ),
+      body: ListView(
+        padding: const EdgeInsets.all(8),
+        children: <Widget>[
+          Container(
+            padding: EdgeInsets.all(15),
+            child: Center(child: carousel.PlanCarousel()),
+          ),
+          // Manejar como un Array 
+          Container(
+            height: 100,
+            color: Colors.blue,
+            child: const Center(child: Text('Entry A')),
+          ),
+          Container(
+            height: 100,
+            color: Colors.blue,
+            child: const Center(child: Text('Entry B')),
+          ),
+          Container(
+            height: 100,
+            color: Colors.blue,
+            child: const Center(child: Text('Entry C')),
+          ),
+        ],
+      ),
+    );
   }
 }

@@ -35,7 +35,6 @@ class _PlanCarouselState extends State<PlanCarousel> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(20),
       child: Stack(
         children: [
           // Area del Carousel
