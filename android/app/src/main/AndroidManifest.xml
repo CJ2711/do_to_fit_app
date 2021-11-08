@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.qdev.do_to_fit_app">
+    package="com.example.do_to_fit_app">
    <application
         android:label="do_to_fit_app"
         android:icon="@mipmap/ic_launcher">
