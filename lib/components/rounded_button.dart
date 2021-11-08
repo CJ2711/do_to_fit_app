@@ -4,7 +4,6 @@ class RoundedButton extends StatelessWidget {
   final String text;
   final VoidCallback? press;
   final Color color, textColor;
-  // final String iconSRC;
 
   const RoundedButton({
     Key? key,
@@ -12,7 +11,6 @@ class RoundedButton extends StatelessWidget {
     this.press,
     this.color = Colors.lightBlue,
     this.textColor = Colors.white,
-    // this.iconSRC
   }) : super(key: key);
 
   @override
