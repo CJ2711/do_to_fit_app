@@ -1,4 +1,4 @@
-import 'package:do_to_fit_app/Views/BorrarWhenCJ7TermineHome/Borrar.dart';
+import 'package:do_to_fit_app/Views/Home/dashboard.dart';
 import 'package:do_to_fit_app/Views/Login/componentsLogin/loginBC.dart';
 import 'package:do_to_fit_app/Views/Signup/signup.dart';
 import 'package:do_to_fit_app/api/google_signin_api.dart';
@@ -8,11 +8,9 @@ import 'package:do_to_fit_app/components/rounded_button.dart';
 import 'package:do_to_fit_app/components/rounded_input_field.dart';
 import 'package:do_to_fit_app/components/rounded_password_field.dart';
 import 'package:do_to_fit_app/components/social_icons.dart';
-import 'package:do_to_fit_app/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class BodyLogin extends StatelessWidget {
   const BodyLogin({
@@ -25,11 +23,11 @@ class BodyLogin extends StatelessWidget {
       final user = await GoogleSignInApi.login();
       if (user == null) {
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-          content: Text('Inicio de sesión fallado'),
+          content: Text('Inicio de sesión fallado, Usuario no encontrado'),
         ));
       } else {
         Navigator.of(context).pushReplacement(MaterialPageRoute(
-          builder: (context) => BorrarCJ7(
+          builder: (context) => Home(
               user: user), //ESTA ES LA VENTANA QUE SE ABRIRÍA INICIAR SESIÓN
         ));
       }
