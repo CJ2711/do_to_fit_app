@@ -3,10 +3,10 @@ import 'package:do_to_fit_app/api/google_signin_api.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
-class BorrarCJ7 extends StatelessWidget {
+class ProfileView extends StatelessWidget {
   final GoogleSignInAccount user;
 
-  BorrarCJ7({
+  ProfileView({
     Key? key,
     required this.user,
   }) : super(key: key);
@@ -59,7 +59,7 @@ class BorrarCJ7 extends StatelessWidget {
           ),
         ),
         //   Navigator.of(context).pushReplacement(MaterialPageRoute(
-        //   builder: (context) => BorrarCJ7(user: user), //ESTA ES LA VENTANA QUE SE ABRIRÍA INICIAR SESIÓN
+        //   builder: (context) => ProfileView(user: user), //ESTA ES LA VENTANA QUE SE ABRIRÍA INICIAR SESIÓN
         // ));
       );
 }

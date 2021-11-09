@@ -1,4 +1,4 @@
-import 'package:do_to_fit_app/Views/BorrarWhenCJ7TermineHome/Borrar.dart';
+import 'package:do_to_fit_app/Views/Home/dashboard.dart';
 import 'package:do_to_fit_app/Views/Login/componentsLogin/loginBC.dart';
 import 'package:do_to_fit_app/Views/Signup/signup.dart';
 import 'package:do_to_fit_app/api/google_signin_api.dart';
@@ -25,11 +25,11 @@ class BodyLogin extends StatelessWidget {
       final user = await GoogleSignInApi.login();
       if (user == null) {
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-          content: Text('Inicio de sesión fallado'),
+          content: Text('Inicio de sesión fallado, Usuario no encontrado'),
         ));
       } else {
         Navigator.of(context).pushReplacement(MaterialPageRoute(
-          builder: (context) => BorrarCJ7(
+          builder: (context) => Home(
               user: user), //ESTA ES LA VENTANA QUE SE ABRIRÍA INICIAR SESIÓN
         ));
       }
