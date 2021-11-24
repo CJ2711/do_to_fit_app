@@ -1,7 +1,9 @@
 import 'package:do_to_fit_app/Views/BorrarWhenCJ7TermineHome/Borrar.dart';
 import 'package:do_to_fit_app/Views/Login/componentsLogin/loginBC.dart';
 import 'package:do_to_fit_app/Views/Signup/signup.dart';
+import 'package:do_to_fit_app/api/facebook_signin_controller.dart';
 import 'package:do_to_fit_app/api/google_signin_api.dart';
+
 import 'package:do_to_fit_app/components/account_check.dart';
 import 'package:do_to_fit_app/components/or_divider.dart';
 import 'package:do_to_fit_app/components/rounded_button.dart';
