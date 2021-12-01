@@ -1,5 +1,6 @@
 import 'package:do_to_fit_app/Views/Home/profileView.dart';
 import 'package:do_to_fit_app/api/google_signin_api.dart';
+import 'package:do_to_fit_app/model/Classes/usuario.dart';
 import 'package:flutter/material.dart';
 import 'package:do_to_fit_app/components/carousel.dart' as carousel;
 import 'package:do_to_fit_app/model/News_Section/newsOn.dart' as newsSection;
@@ -8,8 +9,9 @@ import 'package:google_sign_in/google_sign_in.dart';
 import '../Login/login.dart';
 
 class Home extends StatelessWidget {
-  final GoogleSignInAccount user;
-  const Home({Key? key, required this.user}) : super(key: key);
+  // final GoogleSignInAccount? user;
+  final Usuario usuario;
+  const Home({Key? key, required this.usuario}) : super(key: key);
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
@@ -26,18 +28,13 @@ class Home extends StatelessWidget {
                   MaterialPageRoute(
                     builder: (context) {
                       return ProfileView(
-                        user: user,
+                        user: usuario,
                       );
                     },
                   ),
                 );
               },
             ),
-            // TextButton(
-            //   child: Text('Salir'),
-            //   style: TextButton.styleFrom(primary: Colors.white),
-            //   onPressed: ()
-            // )
           ],
         ),
         drawer: Drawer(
@@ -48,21 +45,23 @@ class Home extends StatelessWidget {
                 child: Column(
                   children: [
                     Expanded(
-                      child: Container(
-                        height: 70,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          image: DecorationImage(
-                            image: NetworkImage(user.photoUrl!),
-                          ),
-                        ),
+                      child:
+                          //    Container(
+                          //     height: 70,
+                          //     decoration: BoxDecoration(
+                          //       shape: BoxShape.circle,
+                          //       image: DecorationImage(
+                          //         image: NetworkImage(user!.photoUrl!),
+                          //       ),
+                          //     ),
+                          //   ),
+                          // ),
+                          Container(
+                        child: (Padding(
+                          padding: EdgeInsets.fromLTRB(0, 20, 0, 10),
+                          child: Text(usuario.getName),
+                        )),
                       ),
-                    ),
-                    Container(
-                      child: (Padding(
-                        padding: EdgeInsets.fromLTRB(0, 20, 0, 10),
-                        child: Text(user.displayName!),
-                      )),
                     ),
                   ],
                 ),
@@ -76,7 +75,7 @@ class Home extends StatelessWidget {
                     MaterialPageRoute(
                       builder: (context) {
                         return ProfileView(
-                          user: user,
+                          user: usuario,
                         );
                       },
                     ),
@@ -88,7 +87,6 @@ class Home extends StatelessWidget {
                 title: Text('Cerrar Sesión'),
                 onTap: () async {
                   await GoogleSignInApi.logout();
-
                   Navigator.of(context).pushReplacement(MaterialPageRoute(
                     builder: (context) => LoginScreen(),
                   ));

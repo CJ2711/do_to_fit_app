@@ -1,10 +1,9 @@
 import 'package:do_to_fit_app/Views/Login/login.dart';
-import 'package:do_to_fit_app/api/google_signin_api.dart';
+import 'package:do_to_fit_app/model/Classes/usuario.dart';
 import 'package:flutter/material.dart';
-import 'package:google_sign_in/google_sign_in.dart';
 
 class ProfileView extends StatelessWidget {
-  final GoogleSignInAccount user;
+  final Usuario user;
 
   ProfileView({
     Key? key,
@@ -21,8 +20,7 @@ class ProfileView extends StatelessWidget {
               child: Text('Salir'),
               style: TextButton.styleFrom(primary: Colors.white),
               onPressed: () async {
-                await GoogleSignInApi.logout();
-
+                // await GoogleSignInApi.logout();
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
                   builder: (context) => LoginScreen(),
                 ));
@@ -41,20 +39,21 @@ class ProfileView extends StatelessWidget {
                 style: TextStyle(fontSize: 24),
               ),
               SizedBox(height: 32),
-              CircleAvatar(
-                radius: 40,
-                backgroundImage: NetworkImage(user.photoUrl!),
-              ),
+              // CircleAvatar(
+              //   radius: 40,
+              //   backgroundImage: NetworkImage(user.photoUrl!),
+              // ),
               SizedBox(height: 8),
               Text(
-                'Nombre: ' + user.displayName!,
+                'Nombre: ' + user.getEmail,
                 style: TextStyle(color: Colors.white, fontSize: 15),
               ),
               SizedBox(height: 8),
               Text(
-                'Email' + user.email,
+                'Nombre: ' + user.getName,
                 style: TextStyle(color: Colors.white, fontSize: 15),
-              )
+              ),
+              SizedBox(height: 8),
             ],
           ),
         ),
