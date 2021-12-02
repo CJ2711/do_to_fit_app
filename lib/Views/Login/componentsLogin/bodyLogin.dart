@@ -1,15 +1,9 @@
-import 'package:do_to_fit_app/Views/Home/dashboard.dart';
 import 'package:do_to_fit_app/Views/Login/componentsLogin/loginBC.dart';
 import 'package:do_to_fit_app/Views/Signup/accCreation.dart';
-import 'package:do_to_fit_app/Views/Signup/signup.dart';
-import 'package:do_to_fit_app/api/google_signin_api.dart';
 import 'package:do_to_fit_app/components/account_check.dart';
-import 'package:do_to_fit_app/components/or_divider.dart';
 import 'package:do_to_fit_app/components/rounded_button.dart';
 import 'package:do_to_fit_app/components/rounded_input_field.dart';
 import 'package:do_to_fit_app/components/rounded_password_field.dart';
-import 'package:do_to_fit_app/components/social_icons.dart';
-import 'package:do_to_fit_app/model/Classes/usuario.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';

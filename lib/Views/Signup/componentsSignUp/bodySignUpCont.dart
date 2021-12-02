@@ -1,11 +1,9 @@
 import 'package:do_to_fit_app/Views/Home/dashboard.dart';
-import 'package:do_to_fit_app/Views/Signup/componentsSignUp/bodySignUp.dart';
 import 'package:do_to_fit_app/Views/Signup/componentsSignUp/signupBC.dart';
 import 'package:do_to_fit_app/components/rounded_button.dart';
 import 'package:do_to_fit_app/model/Classes/usuario.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-// import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class BodySignUpCont extends StatefulWidget {
   final Usuario usuario;

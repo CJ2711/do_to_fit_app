@@ -1,6 +1,5 @@
 import 'package:do_to_fit_app/Views/Login/login.dart';
 import 'package:do_to_fit_app/Views/Signup/accCreation.dart';
-import 'package:do_to_fit_app/Views/Signup/signup.dart';
 import 'package:do_to_fit_app/Views/Welcome/componentsWelcome/background.dart';
 import 'package:do_to_fit_app/components/rounded_button.dart';
 import 'package:flutter/material.dart';

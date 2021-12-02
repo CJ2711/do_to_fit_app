@@ -1,5 +1,4 @@
 import 'package:do_to_fit_app/Views/Signup/signup.dart';
-import 'package:do_to_fit_app/Views/Welcome/componentsWelcome/background.dart';
 import 'package:do_to_fit_app/api/google_signin_api.dart';
 import 'package:do_to_fit_app/components/rounded_button.dart';
 import 'package:do_to_fit_app/model/Classes/usuario.dart';

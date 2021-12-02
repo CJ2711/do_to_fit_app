@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'componentsSignUp/bodySignUpCont.dart';
 
 class SignUpScreenCont extends StatelessWidget {
-  Usuario usuario;
+  final Usuario usuario;
   SignUpScreenCont({
     Key? key,
     required this.usuario,

@@ -4,8 +4,6 @@ import 'package:do_to_fit_app/Views/Signup/componentsSignUp/signupBC.dart';
 import 'package:do_to_fit_app/Views/Signup/signup_cont.dart';
 import 'package:do_to_fit_app/components/account_check.dart';
 import 'package:do_to_fit_app/components/rounded_button.dart';
-// import 'package:do_to_fit_app/components/rounded_input_field.dart';
-// import 'package:do_to_fit_app/components/rounded_password_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:do_to_fit_app/model/Classes/usuario.dart';

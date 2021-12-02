@@ -4,7 +4,6 @@ import 'package:do_to_fit_app/model/Classes/usuario.dart';
 import 'package:flutter/material.dart';
 import 'package:do_to_fit_app/components/carousel.dart' as carousel;
 import 'package:do_to_fit_app/model/News_Section/newsOn.dart' as newsSection;
-import 'package:google_sign_in/google_sign_in.dart';
 
 import '../Login/login.dart';
 
