@@ -1,0 +1,15 @@
+{
+    "success": true,
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8zLjEzNy4yMDkuMjE2XC9EVEYtQmFja1wvcHVibGljXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5MzYzNTc1LCJleHAiOjE2MzkzNjcxNzUsIm5iZiI6MTYzOTM2MzU3NSwianRpIjoiNDV0Nnl3OGFCZGFmVXZ5NiIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.v7AksNVPFHW7uu7K6bwiuBxThiqRy5eDHxIJsnkhNds",
+    "user": {
+        "id": 1,
+        "name": "Christian Barbosa",
+        "email": "cricriman7@gmail.com",
+        "weight": 77,
+        "height": 177,
+        "planType": "GRATUITO",
+        "goal": "AUMENTAR_MASA",
+        "created_at": "2021-12-12T20: 52: 53.000000Z",
+        "updated_at": "2021-12-12T20: 52: 53.000000Z"
+    }
+}

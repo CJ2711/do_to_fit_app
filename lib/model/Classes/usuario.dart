@@ -1,4 +1,7 @@
 import 'dart:convert';
+import 'dart:ffi';
+
+import 'package:enum_to_string/enum_to_string.dart';
 import 'package:http/http.dart' as http;
 
 enum Goal {
@@ -17,7 +20,7 @@ class Usuario {
   Usuario({
     this.name,
     this.email,
-    this.pssword,
+    this.password,
     this.weight,
     this.height,
     this.planType = PlanType.GRATUITO,
@@ -26,47 +29,62 @@ class Usuario {
 
   String? name;
   String? email;
-  String? pssword;
+  String? password;
   double? weight;
   double? height;
   PlanType? planType;
   Goal? goal;
 
-  Future<void> agregarUsuario(usuario) async {
+  Future<String> userLogin(String correo, String contrasenia) async {
     var client = http.Client();
+    String salida;
     try {
-      var response = await client
-          .post(Uri.https('http://3.137.209.216/api/', 'user/register'), body: {
-        'name': this.name,
-        'email': this.email,
-        'pssword': this.pssword,
-        'weight': this.weight,
-        'height': this.height,
-        'planType':this.planType,
-        'goal': this.goal
-      });
+      var request = http.MultipartRequest(
+          'POST', Uri.parse('http://3.137.209.216/DTF-Back/public/api/login'));
+      request.fields.addAll(
+        {'email': correo, 'password': contrasenia},
+      );
 
-      if (response.statusCode == 201) {
-        var decodedResponse =
-            jsonDecode(utf8.decode(response.bodyBytes)) as Map;
-        var uri = Uri.parse(decodedResponse['uri'] as String);
-        print(await client.get(uri));
+      http.StreamedResponse response = await request.send();
+
+      if (response.statusCode == 200) {
+        salida = await response.stream.bytesToString();
+        print(salida);
+        return salida;
       } else {
-        print('Request failed with status: ${response.statusCode}.');
+        salida = response.reasonPhrase!;
+        print(response.reasonPhrase);
       }
     } finally {
       client.close();
     }
+    return 'error';
   }
 
-  Future<void> test(usuario) async {
+  void agregarUsuarioV2(Usuario usuario) async {
     var client = http.Client();
     try {
-      var response = await client.post(Uri.https('awssite.com', 'user/create'),
-          body: {'name': usuario.toString(name), 'color': 'blue'});
-      var decodedResponse = jsonDecode(utf8.decode(response.bodyBytes)) as Map;
-      var uri = Uri.parse(decodedResponse['uri'] as String);
-      print(await client.get(uri));
+      var request = http.MultipartRequest('POST',
+          Uri.parse('http://3.137.209.216/DTF-Back/public/api/register'));
+      request.fields.addAll({
+        'name': usuario.getName,
+        'email': usuario.getEmail,
+        'password': usuario.getPassword,
+        'weight': usuario.getWeight.toString(),
+        'height': usuario.getHeight.toString(),
+        'planType': EnumToString.convertToString(PlanType.GRATUITO),
+        'goal': EnumToString.convertToString(usuario.getGoal),
+      });
+
+      http.StreamedResponse response = await request.send();
+
+      if (response.statusCode == 200) {
+        print(await response.stream.bytesToString());
+      } else {
+        print(response.reasonPhrase);
+        client.close();
+        return;
+      }
     } finally {
       client.close();
     }
@@ -79,8 +97,8 @@ class Usuario {
   String get getEmail => email.toString();
   void setEmail(String value) => this.email = value;
 
-  String get getPssword => pssword.toString();
-  void setPssword(String value) => this.pssword = value;
+  String get getPassword => password.toString();
+  void setPssword(String value) => this.password = value;
 
   double? get getWeight => weight;
   void setWeight(String value) => weight = double.parse(value);
@@ -88,10 +106,10 @@ class Usuario {
   double? get getHeight => height;
   void setHeight(String value) => this.height = double.parse(value);
 
-  String get getPlanType => this.planType.toString();
+  PlanType get getPlanType => this.planType!;
   void setPlanType(PlanType value) => this.planType = value;
 
-  String get getGoal => this.goal.toString();
+  Goal get getGoal => this.goal!;
   void setGoal(Goal goal) => this.goal = goal;
 
   @override
@@ -100,13 +118,13 @@ class Usuario {
         '\n ' +
         getEmail +
         '\n  ' +
-        getPssword +
+        getPassword +
         '\n  ' +
         getWeight.toString() +
         '\n  ' +
         getHeight.toString() +
         '\n  ' +
-        getGoal +
+        getGoal.toString() +
         '\n';
   }
 }

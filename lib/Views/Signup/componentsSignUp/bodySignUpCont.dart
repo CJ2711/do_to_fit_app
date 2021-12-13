@@ -1,4 +1,5 @@
 import 'package:do_to_fit_app/Views/Home/dashboard.dart';
+import 'package:do_to_fit_app/Views/Login/login.dart';
 import 'package:do_to_fit_app/Views/Signup/componentsSignUp/signupBC.dart';
 import 'package:do_to_fit_app/components/rounded_button.dart';
 import 'package:do_to_fit_app/model/Classes/usuario.dart';
@@ -72,6 +73,7 @@ class _BodySignUpContState extends State<BodySignUpCont> {
               RoundedButton(
                 text: "SIGUIENTE",
                 press: () {
+                  widget.usuario.agregarUsuarioV2(widget.usuario);
                   showDialog(
                     context: context,
                     builder: (scaffoldKey) {
@@ -87,7 +89,8 @@ class _BodySignUpContState extends State<BodySignUpCont> {
                                 context,
                                 MaterialPageRoute(
                                   builder: (context) {
-                                    return Home(usuario: widget.usuario);
+                                    // return Home(usuario: widget.usuario);
+                                    return LoginScreen();
                                   },
                                 ),
                               );
