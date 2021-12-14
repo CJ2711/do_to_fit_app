@@ -1,8 +1,9 @@
 import 'package:do_to_fit_app/Views/Home/routines_detail.dart';
+import 'package:do_to_fit_app/model/Classes/usuario.dart';
 import 'package:flutter/material.dart';
 
 class Routines extends StatefulWidget {
-  const Routines({Key? key}) : super(key: key);
+  const Routines({Key? key, required Usuario user}) : super(key: key);
 
   @override
   _RutinesWidgetState createState() => _RutinesWidgetState();
