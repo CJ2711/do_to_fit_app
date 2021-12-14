@@ -33,6 +33,13 @@ class AccCreation extends StatelessWidget {
         .size; //Nos brinda el total del alto y ancho de la pantalla.
     return Scaffold(
       backgroundColor: Colors.white,
+      appBar: AppBar(
+        iconTheme: IconThemeData(
+          color: Colors.white,
+        ),
+        title: Text("Registro"),
+        centerTitle: true,
+      ),
       body: ListView(
         children: [
           SizedBox(height: size.height * 0.05),

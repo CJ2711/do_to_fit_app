@@ -14,6 +14,13 @@ class _SignupScreenState extends State<SignupScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        iconTheme: IconThemeData(
+          color: Colors.white,
+        ),
+        title: Text("Registro"),
+        centerTitle: true,
+      ),
       body: BodySignUp(user: widget.user),
     );
   }
