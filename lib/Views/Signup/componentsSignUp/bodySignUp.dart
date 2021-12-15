@@ -300,9 +300,9 @@ class _BodySignUpState extends State<BodySignUp> {
     bool psswrdFlag = false;
     String nameSurname = nameSurnameTextController.text.trim();
     bool nameSurnameFlag = false;
-    double weight = double.parse(weightTextController.text.trim());
+    String weight = weightTextController.text.trim();
     bool weightFlag = false;
-    double height = double.parse(heightTextController.text.trim());
+    String height = heightTextController.text.trim();
     bool heightFlag = false;
 
     if (mail == '' ||
@@ -390,7 +390,7 @@ class _BodySignUpState extends State<BodySignUp> {
       nameSurnameFlag = true;
     }
 
-    if (weight.isNegative || weight.isNaN) {
+    if (weight == '' || weight.isEmpty) {
       showDialog(
           context: context,
           builder: (scaffoldKey) {
@@ -406,7 +406,7 @@ class _BodySignUpState extends State<BodySignUp> {
       weightFlag = true;
     }
 
-    if (height.isNegative || height.isNaN) {
+    if (height == '' || height.isEmpty) {
       showDialog(
           context: context,
           builder: (scaffoldKey) {
@@ -440,20 +440,5 @@ class _BodySignUpState extends State<BodySignUp> {
           });
       return;
     }
-
-    print('INFO DEL USUARIO: ---------------------------');
-    print(widget.user.getEmail +
-        " " +
-        widget.user.getName +
-        " " +
-        widget.user.getPassword +
-        " " +
-        widget.user.getWeight.toString() +
-        " " +
-        widget.user.getHeight.toString() +
-        " " +
-        widget.user.getPlanType.toString() +
-        " " +
-        widget.user.goal.toString());
   }
 }

@@ -20,20 +20,15 @@ class NewsSection extends StatelessWidget {
     return news.map((newV) {
       return Card(
         clipBehavior: Clip.antiAlias,
-        // TODO: Adjust card heights (103)
         child: Column(
-          // TODO: Center items on the card (103)
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.all(16),
                 child: Column(
-                  // TODO: Align labels to the bottom and center (103)
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  // TODO: Change innermost Column (103)
                   children: <Widget>[
-                    // TODO: Handle overflowing labels (103)
                     Text(
                       newV.title,
                       style: theme.textTheme.headline6,

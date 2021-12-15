@@ -17,10 +17,7 @@ class News {
   final Target target;
   final String title;
   final String description;
-
-  // String get assetName => '$id-0.jpg';
-  // String get assetPackage => 'shrine_images';
-
+  
   @override
   String toString() => "$title (id=$id)";
 }
