@@ -1,3 +1,4 @@
+import 'package:do_to_fit_app/Views/Welcome/welcome.screen.dart';
 import 'package:do_to_fit_app/constants.dart';
 import 'package:flutter/material.dart';
 import 'Views/Welcome/welcome.screen.dart';
@@ -15,8 +16,6 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
       ),
       home: WelcomeScreen(),
-      // home: RoutinesDetail(),
-      // home: Routines(),
     );
   }
 }

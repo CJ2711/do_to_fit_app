@@ -1,3 +1,4 @@
+import 'package:do_to_fit_app/Views/Home/diets.dart';
 import 'package:do_to_fit_app/Views/Home/profileView.dart';
 import 'package:do_to_fit_app/Views/Home/routines.dart';
 import 'package:do_to_fit_app/api/google_signin_api.dart';
@@ -101,6 +102,22 @@ class Home extends StatelessWidget {
                     MaterialPageRoute(
                       builder: (context) {
                         return Routines(
+                          user: usuario,
+                        );
+                      },
+                    ),
+                  );
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.food_bank_outlined),
+                title: Text('Dietas'),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return Diets(
                           user: usuario,
                         );
                       },
