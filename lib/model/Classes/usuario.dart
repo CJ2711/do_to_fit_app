@@ -101,16 +101,25 @@ class Usuario {
   void setPssword(String value) => this.password = value;
 
   double? get getWeight => weight;
-  void setWeight(String value) => weight = double.parse(value);
+  void setWeight(String value) => weight = double.tryParse(value);
 
   double? get getHeight => height;
-  void setHeight(String value) => this.height = double.parse(value);
+  void setHeight(String value) => this.height = double.tryParse(value);
 
   PlanType get getPlanType => this.planType!;
   void setPlanType(PlanType value) => this.planType = value;
 
   Goal get getGoal => this.goal!;
-  void setGoal(Goal goal) => this.goal = goal;
+  void setGoal(Goal value) => this.goal = value;
+
+  factory Usuario.fromJson(Map<String, dynamic> parsedJson) {
+    return Usuario(
+        name: parsedJson['name'],
+        weight: parsedJson['weight'],
+        height: parsedJson['height'],
+        planType: parsedJson['planType'],
+        goal: parsedJson['goal']);
+  }
 
   @override
   String toString() {

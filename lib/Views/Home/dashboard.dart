@@ -1,4 +1,5 @@
 import 'package:do_to_fit_app/Views/Home/profileView.dart';
+import 'package:do_to_fit_app/Views/Home/routines.dart';
 import 'package:do_to_fit_app/api/google_signin_api.dart';
 import 'package:do_to_fit_app/model/Classes/usuario.dart';
 import 'package:flutter/material.dart';
@@ -74,6 +75,22 @@ class Home extends StatelessWidget {
                     MaterialPageRoute(
                       builder: (context) {
                         return ProfileView(
+                          user: usuario,
+                        );
+                      },
+                    ),
+                  );
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.whatshot_outlined),
+                title: Text('Rutinas'),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return Routines(
                           user: usuario,
                         );
                       },

@@ -300,17 +300,17 @@ class _BodySignUpState extends State<BodySignUp> {
     bool psswrdFlag = false;
     String nameSurname = nameSurnameTextController.text.trim();
     bool nameSurnameFlag = false;
-    String weight = weightTextController.text.trim();
+    double weight = double.parse(weightTextController.text.trim());
     bool weightFlag = false;
-    String height = heightTextController.text.trim();
+    double height = double.parse(heightTextController.text.trim());
     bool heightFlag = false;
 
     if (mail == '' ||
         psswrd == '' ||
         psswrd2 == '' ||
         nameSurname == '' ||
-        weight == '' ||
-        height == '') {
+        weightTextController.text.trim() == '' ||
+        heightTextController.text.trim() == '') {
       showDialog(
           context: context,
           builder: (scaffoldKey) {
@@ -390,7 +390,7 @@ class _BodySignUpState extends State<BodySignUp> {
       nameSurnameFlag = true;
     }
 
-    if (weight == '' || weight.isEmpty) {
+    if (weight.isNegative || weight.isNaN) {
       showDialog(
           context: context,
           builder: (scaffoldKey) {
@@ -402,11 +402,11 @@ class _BodySignUpState extends State<BodySignUp> {
       weightFlag = false;
       return;
     } else {
-      widget.user.setWeight(weight);
+      widget.user.setWeight(weight.toString());
       weightFlag = true;
     }
 
-    if (height == '' || height.isEmpty) {
+    if (height.isNegative || height.isNaN) {
       showDialog(
           context: context,
           builder: (scaffoldKey) {
@@ -418,7 +418,7 @@ class _BodySignUpState extends State<BodySignUp> {
       heightFlag = false;
       return;
     } else {
-      widget.user.setHeight(height);
+      widget.user.setHeight(height.toString());
       heightFlag = true;
     }
 

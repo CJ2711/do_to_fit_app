@@ -9,6 +9,7 @@ import 'package:do_to_fit_app/components/rounded_button.dart';
 import 'package:do_to_fit_app/components/rounded_input_field.dart';
 import 'package:do_to_fit_app/components/rounded_password_field.dart';
 import 'package:do_to_fit_app/model/Classes/usuario.dart';
+import 'package:enum_to_string/enum_to_string.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -26,7 +27,6 @@ class _BodyLoginState extends State<BodyLogin> {
   late TextEditingController mailTextController;
   late TextEditingController psswrdTextController;
   bool psswrdVisibility = false;
-  Usuario user = new Usuario();
 
   @override
   void initState() {
@@ -208,15 +208,23 @@ class _BodyLoginState extends State<BodyLogin> {
     var res = await CallApi().postData(data, 'login');
     var body = json.decode(res.body);
     print(body);
-    if (body['success']) {
+    if (body['success'] == false) {
+      // _showMessage(body['message'])
+      _showMessage('Correo o contraseña invalida');
+    } else {
+      // Usuario user = new Usuario.fromJson(body);
+      Usuario user = new Usuario();
       user.setEmail(mailTextController.text.trim());
       user.setPssword(psswrdTextController.text.trim());
-      user.setName(body['user']('name'));
-      user.setHeight(body['user']('height'));
-      user.setWeight(body['user']('weight'));
-      user.setPlanType(body['user']('planType'));
-      user.setGoal(body['user']('goal'));
-      print(user);
+      // print(user);
+      user.setName(body['user']['name']);
+      user.setHeight((body['user']['height']).toString());
+      user.setWeight((body['user']['weight']).toString());
+      user.setPlanType(EnumToString.fromString(
+          PlanType.values, (body['user']['planType']))!);
+      user.setGoal(
+          EnumToString.fromString(Goal.values, (body['user']['goal']))!);
+      // print(EnumToString.fromString(Goal.values, (body['Goal']).toString()));
       Navigator.push(
         context,
         MaterialPageRoute(
@@ -225,8 +233,6 @@ class _BodyLoginState extends State<BodyLogin> {
           },
         ),
       );
-    } else {
-      _showMessage(body['message']);
     }
   }
 
@@ -235,7 +241,7 @@ class _BodyLoginState extends State<BodyLogin> {
     final snackBar = SnackBar(
       content: Text(msg),
       action: SnackBarAction(
-        label: 'Close',
+        label: 'Cerrar',
         onPressed: () {},
       ),
     );

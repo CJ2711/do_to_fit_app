@@ -15,7 +15,7 @@ class _LoginScreenState extends State<LoginScreen> {
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           color: Colors.white,
-          onPressed: () => Navigator.push(
+          onPressed: () => Navigator.pushReplacement(
             context,
             MaterialPageRoute(
               builder: (context) {
