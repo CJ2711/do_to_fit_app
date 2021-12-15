@@ -1,3 +1,4 @@
+import 'package:do_to_fit_app/Views/Home/routines_detail.dart';
 import 'package:do_to_fit_app/components/infoBox.dart';
 import 'package:do_to_fit_app/model/Classes/usuario.dart';
 import 'package:flutter/material.dart';
@@ -60,6 +61,21 @@ class _RutinesWidgetState extends State<Routines> {
                       textLarge: 'Día Lunes',
                       textMedium: '30 minutos | Intensidad Alta',
                       textMedium2: 'En Casa o Exteriores',
+                      pageTransition: InkWell(
+                        onTap: () async {
+                          await Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => RoutinesDetail(),
+                            ),
+                          );
+                        },
+                        child: Icon(
+                          Icons.chevron_right_rounded,
+                          color: Colors.white,
+                          size: 30,
+                        ),
+                      ),
                     ),
                     InfoBox(
                       imageBC: DecorationImage(
@@ -71,6 +87,21 @@ class _RutinesWidgetState extends State<Routines> {
                       textLarge: 'Día Martes',
                       textMedium: '30 minutos | Intensidad Media',
                       textMedium2: 'En Casa o Exteriores',
+                      pageTransition: InkWell(
+                        onTap: () async {
+                          await Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => RoutinesDetail(),
+                            ),
+                          );
+                        },
+                        child: Icon(
+                          Icons.chevron_right_rounded,
+                          color: Colors.white,
+                          size: 30,
+                        ),
+                      ),
                     ),
                     InfoBox(
                       imageBC: DecorationImage(
@@ -82,6 +113,21 @@ class _RutinesWidgetState extends State<Routines> {
                       textLarge: 'Día Miércoles',
                       textMedium: '45 minutos | Intensidad Alta',
                       textMedium2: 'En Casa o Exteriores',
+                      pageTransition: InkWell(
+                        onTap: () async {
+                          await Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => RoutinesDetail(),
+                            ),
+                          );
+                        },
+                        child: Icon(
+                          Icons.chevron_right_rounded,
+                          color: Colors.white,
+                          size: 30,
+                        ),
+                      ),
                     ),
                     InfoBox(
                       imageBC: DecorationImage(
@@ -93,6 +139,21 @@ class _RutinesWidgetState extends State<Routines> {
                       textLarge: 'Día Jueves',
                       textMedium: '40 minutos | Intensidad Media',
                       textMedium2: 'En Casa o Exteriores',
+                      pageTransition: InkWell(
+                        onTap: () async {
+                          await Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => RoutinesDetail(),
+                            ),
+                          );
+                        },
+                        child: Icon(
+                          Icons.chevron_right_rounded,
+                          color: Colors.white,
+                          size: 30,
+                        ),
+                      ),
                     ),
                     InfoBox(
                       imageBC: DecorationImage(
@@ -104,6 +165,21 @@ class _RutinesWidgetState extends State<Routines> {
                       textLarge: 'Día Viernes',
                       textMedium: '35 minutos | Intensidad Alta',
                       textMedium2: 'En Casa o Exteriores',
+                      pageTransition: InkWell(
+                        onTap: () async {
+                          await Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => RoutinesDetail(),
+                            ),
+                          );
+                        },
+                        child: Icon(
+                          Icons.chevron_right_rounded,
+                          color: Colors.white,
+                          size: 30,
+                        ),
+                      ),
                     ),
                     InfoBox(
                       imageBC: DecorationImage(
@@ -115,6 +191,21 @@ class _RutinesWidgetState extends State<Routines> {
                       textLarge: 'Día Sábado',
                       textMedium: '30 minutos | Intensidad Baja',
                       textMedium2: 'En Casa o Exteriores',
+                      pageTransition: InkWell(
+                        onTap: () async {
+                          await Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => RoutinesDetail(),
+                            ),
+                          );
+                        },
+                        child: Icon(
+                          Icons.chevron_right_rounded,
+                          color: Colors.white,
+                          size: 30,
+                        ),
+                      ),
                     ),
                   ],
                 ),

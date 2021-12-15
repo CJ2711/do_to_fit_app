@@ -56,6 +56,21 @@ class _DietsWidgetState extends State<Diets> {
                       textLarge: 'Desayuno',
                       textMedium: '6:00am - 8:00am',
                       textMedium2: '',
+                      pageTransition: InkWell(
+                        // onTap: () async {
+                        //   await Navigator.push(
+                        //     context,
+                        //     MaterialPageRoute(
+                        //       builder: (context) => DietDetail(),
+                        //     ),
+                        //   );
+                        // },
+                        child: Icon(
+                          Icons.chevron_right_rounded,
+                          color: Colors.white,
+                          size: 30,
+                        ),
+                      ),
                     ),
                     InfoBox(
                       imageBC: DecorationImage(
@@ -67,6 +82,21 @@ class _DietsWidgetState extends State<Diets> {
                       textLarge: 'Almuerzo',
                       textMedium: '12:00pm - 1:00pm',
                       textMedium2: '',
+                      pageTransition: InkWell(
+                        // onTap: () async {
+                        //   await Navigator.push(
+                        //     context,
+                        //     MaterialPageRoute(
+                        //       builder: (context) => DietDetail(),
+                        //     ),
+                        //   );
+                        // },
+                        child: Icon(
+                          Icons.chevron_right_rounded,
+                          color: Colors.white,
+                          size: 30,
+                        ),
+                      ),
                     ),
                     InfoBox(
                       imageBC: DecorationImage(
@@ -78,6 +108,21 @@ class _DietsWidgetState extends State<Diets> {
                       textLarge: 'Cena',
                       textMedium: '5:30pm - 7:00pm',
                       textMedium2: '',
+                      pageTransition: InkWell(
+                        // onTap: () async {
+                        //   await Navigator.push(
+                        //     context,
+                        //     MaterialPageRoute(
+                        //       builder: (context) => DietDetail(),
+                        //     ),
+                        //   );
+                        // },
+                        child: Icon(
+                          Icons.chevron_right_rounded,
+                          color: Colors.white,
+                          size: 30,
+                        ),
+                      ),
                     ),
                   ],
                 ),
