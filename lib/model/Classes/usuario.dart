@@ -12,6 +12,7 @@ enum PlanType {
 
 class Usuario {
   Usuario({
+    this.id,
     this.name,
     this.email,
     this.password,
@@ -20,7 +21,7 @@ class Usuario {
     this.planType = PlanType.GRATUITO,
     this.goal,
   });
-
+  int? id;
   String? name;
   String? email;
   String? password;
@@ -30,6 +31,9 @@ class Usuario {
   Goal? goal;
 
   //Metodo get y set
+  int? get getID => id;
+  void setID(String value) => id = int.parse(value);
+
   String get getName => name.toString();
   void setName(String value) => name = value;
 

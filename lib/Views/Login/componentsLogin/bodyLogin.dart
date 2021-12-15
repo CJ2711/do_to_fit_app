@@ -200,6 +200,7 @@ class _BodyLoginState extends State<BodyLogin> {
       Usuario user = new Usuario();
       user.setEmail(mailTextController.text.trim());
       user.setPssword(psswrdTextController.text.trim());
+      user.setID((body['user']['id']).toString());
       user.setName(body['user']['name']);
       user.setHeight((body['user']['height']).toString());
       user.setWeight((body['user']['weight']).toString());
