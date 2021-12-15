@@ -4,12 +4,14 @@ import 'package:flutter/material.dart';
 class InfoBox extends StatelessWidget {
   final DecorationImage imageBC;
   final String textLarge, textMedium, textMedium2;
+  final InkWell pageTransition;
   const InfoBox({
     Key? key,
     required this.imageBC,
     required this.textLarge,
     required this.textMedium,
     required this.textMedium2, //Este en el de dieta se dejará en blanco.
+    required this.pageTransition,
   }) : super(key: key);
 
   @override
@@ -57,21 +59,7 @@ class InfoBox extends StatelessWidget {
                         ),
                       ),
                     ),
-                    InkWell(
-                      onTap: () async {
-                        await Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => RoutinesDetail(),
-                          ),
-                        );
-                      },
-                      child: Icon(
-                        Icons.chevron_right_rounded,
-                        color: Colors.white,
-                        size: 30,
-                      ),
-                    ),
+                    pageTransition,
                   ],
                 ),
               ),
