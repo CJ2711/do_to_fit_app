@@ -9,9 +9,6 @@ class RoundedInputField extends StatelessWidget {
     Key? key,
     required this.hintText,
     required this.icon,
-    // this.icon = Icons.person,
-    /*Está comentado para que la clase sea más general y que el icon 
-    se coloque en los campos que se vayan a utilizar*/
     required this.onChanged,
   }) : super(key: key);
 

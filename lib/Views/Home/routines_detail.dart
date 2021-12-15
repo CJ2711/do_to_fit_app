@@ -1,3 +1,4 @@
+import 'package:do_to_fit_app/Views/Home/components_routine/infoBoxRoutines.dart';
 import 'package:flutter/material.dart';
 
 class RoutinesDetail extends StatefulWidget {
@@ -64,886 +65,116 @@ class _TestWidgetState extends State<RoutinesDetail> {
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     children: [
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 2, 0, 0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Container(
-                              width: MediaQuery.of(context).size.width,
-                              height: 100,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                              ),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            8, 8, 8, 8),
-                                        child: ClipRRect(
-                                          borderRadius:
-                                              BorderRadius.circular(8),
-                                          child: Image.asset(
-                                            'assets/images/jumping-jack.gif',
-                                            width: 74,
-                                            height: 80,
-                                            fit: BoxFit.cover,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  Expanded(
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          8, 1, 0, 0),
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Text(
-                                                'Saltos de Tijera',
-                                                style: TextStyle(
-                                                  fontFamily: 'Lexend Deca',
-                                                  color: Color(0xFF15212B),
-                                                  fontSize: 20,
-                                                  fontWeight: FontWeight.w500,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                          Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Text(
-                                                '0:30',
-                                                style: TextStyle(
-                                                  fontFamily: 'Lexend Deca',
-                                                  color: Color(0xFF8B97A2),
-                                                  fontSize: 18,
-                                                  fontWeight: FontWeight.normal,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
+                      InfoBoxRoutines(
+                        nameRoutine: 'Saltos de Tijera',
+                        timeRoutine: '0:30',
+                        routineImage: Image.asset(
+                          'assets/images/jumping-jack.gif',
+                          width: 74,
+                          height: 80,
+                          fit: BoxFit.cover,
                         ),
                       ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 2, 0, 0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Container(
-                              width: MediaQuery.of(context).size.width,
-                              height: 100,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                              ),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            8, 8, 8, 8),
-                                        child: ClipRRect(
-                                          borderRadius:
-                                              BorderRadius.circular(8),
-                                          child: Image.asset(
-                                            'assets/images/inclined-push-ups.gif',
-                                            width: 74,
-                                            height: 80,
-                                            fit: BoxFit.cover,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  Expanded(
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          8, 1, 0, 0),
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Flexible(
-                                                child: Text(
-                                                  'Flexiones con Inclinación (Apoyo de Brazos)',
-                                                  style: TextStyle(
-                                                    fontFamily: 'Lexend Deca',
-                                                    color: Color(0xFF15212B),
-                                                    fontSize: 20,
-                                                    fontWeight: FontWeight.w500,
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                          Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Text(
-                                                'x10',
-                                                style: TextStyle(
-                                                  fontFamily: 'Lexend Deca',
-                                                  color: Color(0xFF8B97A2),
-                                                  fontSize: 18,
-                                                  fontWeight: FontWeight.normal,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
+                      InfoBoxRoutines(
+                        nameRoutine:
+                            'Flexiones con Inclinación (Apoyo de Brazos)',
+                        timeRoutine: 'x10',
+                        routineImage: Image.asset(
+                          'assets/images/inclined-push-ups.gif',
+                          width: 74,
+                          height: 80,
+                          fit: BoxFit.cover,
                         ),
                       ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 2, 0, 0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Container(
-                              width: MediaQuery.of(context).size.width,
-                              height: 100,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                              ),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            8, 8, 8, 8),
-                                        child: ClipRRect(
-                                          borderRadius:
-                                              BorderRadius.circular(8),
-                                          child: Image.asset(
-                                            'assets/images/Knee-push-up.gif',
-                                            width: 74,
-                                            height: 80,
-                                            fit: BoxFit.cover,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  Expanded(
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          8, 1, 0, 0),
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Text(
-                                                'Flexiones con Apoyo de Rodillas',
-                                                style: TextStyle(
-                                                  fontFamily: 'Lexend Deca',
-                                                  color: Color(0xFF15212B),
-                                                  fontSize: 20,
-                                                  fontWeight: FontWeight.w500,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                          Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Text(
-                                                'x8',
-                                                style: TextStyle(
-                                                  fontFamily: 'Lexend Deca',
-                                                  color: Color(0xFF8B97A2),
-                                                  fontSize: 18,
-                                                  fontWeight: FontWeight.normal,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
+                      InfoBoxRoutines(
+                        nameRoutine: 'Flexiones con Apoyo de Rodillas',
+                        timeRoutine: 'x8',
+                        routineImage: Image.asset(
+                          'assets/images/Knee-push-up.gif',
+                          width: 74,
+                          height: 80,
+                          fit: BoxFit.cover,
                         ),
                       ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 2, 0, 0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Container(
-                              width: MediaQuery.of(context).size.width,
-                              height: 100,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                              ),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            8, 8, 8, 8),
-                                        child: ClipRRect(
-                                          borderRadius:
-                                              BorderRadius.circular(8),
-                                          child: Image.asset(
-                                            'assets/images/push-ups.gif',
-                                            width: 74,
-                                            height: 80,
-                                            fit: BoxFit.cover,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  Expanded(
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          8, 1, 0, 0),
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Text(
-                                                'Flexiones',
-                                                style: TextStyle(
-                                                  fontFamily: 'Lexend Deca',
-                                                  color: Color(0xFF15212B),
-                                                  fontSize: 20,
-                                                  fontWeight: FontWeight.w500,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                          Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Text(
-                                                'x8',
-                                                style: TextStyle(
-                                                  fontFamily: 'Lexend Deca',
-                                                  color: Color(0xFF8B97A2),
-                                                  fontSize: 18,
-                                                  fontWeight: FontWeight.normal,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
+                      InfoBoxRoutines(
+                        nameRoutine: 'Flexiones',
+                        timeRoutine: 'x8',
+                        routineImage: Image.asset(
+                          'assets/images/push-ups.gif',
+                          width: 74,
+                          height: 80,
+                          fit: BoxFit.cover,
                         ),
                       ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 2, 0, 0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Container(
-                              width: MediaQuery.of(context).size.width,
-                              height: 100,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                              ),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            8, 8, 8, 8),
-                                        child: ClipRRect(
-                                          borderRadius:
-                                              BorderRadius.circular(8),
-                                          child: Image.asset(
-                                            'assets/images/openarm.gif',
-                                            width: 74,
-                                            height: 80,
-                                            fit: BoxFit.cover,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  Expanded(
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          8, 1, 0, 0),
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Text(
-                                                'Flexiones con Brazos Abiertos',
-                                                style: TextStyle(
-                                                  fontFamily: 'Lexend Deca',
-                                                  color: Color(0xFF15212B),
-                                                  fontSize: 20,
-                                                  fontWeight: FontWeight.w500,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                          Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Text(
-                                                'x8',
-                                                style: TextStyle(
-                                                  fontFamily: 'Lexend Deca',
-                                                  color: Color(0xFF8B97A2),
-                                                  fontSize: 18,
-                                                  fontWeight: FontWeight.normal,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
+                      InfoBoxRoutines(
+                        nameRoutine: 'Flexiones con Brazos Abiertos',
+                        timeRoutine: 'x8',
+                        routineImage: Image.asset(
+                          'assets/images/openarm.gif',
+                          width: 74,
+                          height: 80,
+                          fit: BoxFit.cover,
                         ),
                       ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 2, 0, 0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Container(
-                              width: MediaQuery.of(context).size.width,
-                              height: 100,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                              ),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            8, 8, 8, 8),
-                                        child: ClipRRect(
-                                          borderRadius:
-                                              BorderRadius.circular(8),
-                                          child: Image.asset(
-                                            'assets/images/inclined-push-ups.gif',
-                                            width: 74,
-                                            height: 80,
-                                            fit: BoxFit.cover,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  Expanded(
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          8, 1, 0, 0),
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Text(
-                                                'Flexiones con Inclinación (Apoyo de Brazos)',
-                                                style: TextStyle(
-                                                  fontFamily: 'Lexend Deca',
-                                                  color: Color(0xFF15212B),
-                                                  fontSize: 20,
-                                                  fontWeight: FontWeight.w500,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                          Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Text(
-                                                'x10',
-                                                style: TextStyle(
-                                                  fontFamily: 'Lexend Deca',
-                                                  color: Color(0xFF8B97A2),
-                                                  fontSize: 18,
-                                                  fontWeight: FontWeight.normal,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
+                      InfoBoxRoutines(
+                        nameRoutine:
+                            'Flexiones con Inclinación (Apoyo de Brazos)',
+                        timeRoutine: 'x10',
+                        routineImage: Image.asset(
+                          'assets/images/inclined-push-ups.gif',
+                          width: 74,
+                          height: 80,
+                          fit: BoxFit.cover,
                         ),
                       ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 2, 0, 0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Container(
-                              width: MediaQuery.of(context).size.width,
-                              height: 100,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                              ),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            8, 8, 8, 8),
-                                        child: ClipRRect(
-                                          borderRadius:
-                                              BorderRadius.circular(8),
-                                          child: Image.asset(
-                                            'assets/images/Knee-push-up.gif',
-                                            width: 74,
-                                            height: 80,
-                                            fit: BoxFit.cover,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  Expanded(
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          8, 1, 0, 0),
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Text(
-                                                'Flexiones con Apoyo de Rodillas',
-                                                style: TextStyle(
-                                                  fontFamily: 'Lexend Deca',
-                                                  color: Color(0xFF15212B),
-                                                  fontSize: 20,
-                                                  fontWeight: FontWeight.w500,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                          Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Text(
-                                                'x8',
-                                                style: TextStyle(
-                                                  fontFamily: 'Lexend Deca',
-                                                  color: Color(0xFF8B97A2),
-                                                  fontSize: 18,
-                                                  fontWeight: FontWeight.normal,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
+                      InfoBoxRoutines(
+                        nameRoutine: 'Flexiones con Apoyo de Rodillas',
+                        timeRoutine: 'x8',
+                        routineImage: Image.asset(
+                          'assets/images/Knee-push-up.gif',
+                          width: 74,
+                          height: 80,
+                          fit: BoxFit.cover,
                         ),
                       ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 2, 0, 0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Container(
-                              width: MediaQuery.of(context).size.width,
-                              height: 100,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                              ),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            8, 8, 8, 8),
-                                        child: ClipRRect(
-                                          borderRadius:
-                                              BorderRadius.circular(8),
-                                          child: Image.asset(
-                                            'assets/images/push-ups.gif',
-                                            width: 74,
-                                            height: 80,
-                                            fit: BoxFit.cover,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  Expanded(
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          8, 1, 0, 0),
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Text(
-                                                'Flexiones',
-                                                style: TextStyle(
-                                                  fontFamily: 'Lexend Deca',
-                                                  color: Color(0xFF15212B),
-                                                  fontSize: 20,
-                                                  fontWeight: FontWeight.w500,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                          Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Text(
-                                                'x10',
-                                                style: TextStyle(
-                                                  fontFamily: 'Lexend Deca',
-                                                  color: Color(0xFF8B97A2),
-                                                  fontSize: 18,
-                                                  fontWeight: FontWeight.normal,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
+                      InfoBoxRoutines(
+                        nameRoutine: 'Flexiones',
+                        timeRoutine: 'x8',
+                        routineImage: Image.asset(
+                          'assets/images/push-ups.gif',
+                          width: 74,
+                          height: 80,
+                          fit: BoxFit.cover,
                         ),
                       ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 2, 0, 0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Container(
-                              width: MediaQuery.of(context).size.width,
-                              height: 100,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                              ),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            8, 8, 8, 8),
-                                        child: ClipRRect(
-                                          borderRadius:
-                                              BorderRadius.circular(8),
-                                          child: Image.asset(
-                                            'assets/images/openarm.gif',
-                                            width: 74,
-                                            height: 80,
-                                            fit: BoxFit.cover,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  Expanded(
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          8, 1, 0, 0),
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Text(
-                                                'Flexiones con Brazos Abiertos',
-                                                style: TextStyle(
-                                                  fontFamily: 'Lexend Deca',
-                                                  color: Color(0xFF15212B),
-                                                  fontSize: 20,
-                                                  fontWeight: FontWeight.w500,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                          Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Text(
-                                                'x8',
-                                                style: TextStyle(
-                                                  fontFamily: 'Lexend Deca',
-                                                  color: Color(0xFF8B97A2),
-                                                  fontSize: 18,
-                                                  fontWeight: FontWeight.normal,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
+                      InfoBoxRoutines(
+                        nameRoutine: 'Flexiones con Brazos Abiertos',
+                        timeRoutine: 'x8',
+                        routineImage: Image.asset(
+                          'assets/images/openarm.gif',
+                          width: 74,
+                          height: 80,
+                          fit: BoxFit.cover,
                         ),
                       ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 2, 0, 0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Container(
-                              width: MediaQuery.of(context).size.width,
-                              height: 100,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                              ),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            8, 8, 8, 8),
-                                        child: ClipRRect(
-                                          borderRadius:
-                                              BorderRadius.circular(8),
-                                          child: Image.asset(
-                                            'assets/images/cobra-stretch.png',
-                                            width: 74,
-                                            height: 80,
-                                            fit: BoxFit.cover,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  Expanded(
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          8, 1, 0, 0),
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Text(
-                                                'Estiramiento de Cobra',
-                                                style: TextStyle(
-                                                  fontFamily: 'Lexend Deca',
-                                                  color: Color(0xFF15212B),
-                                                  fontSize: 20,
-                                                  fontWeight: FontWeight.w500,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                          Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Text(
-                                                '0:30',
-                                                style: TextStyle(
-                                                  fontFamily: 'Lexend Deca',
-                                                  color: Color(0xFF8B97A2),
-                                                  fontSize: 18,
-                                                  fontWeight: FontWeight.normal,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
+                      InfoBoxRoutines(
+                        nameRoutine: 'Estiramiento de Cobra',
+                        timeRoutine: '0:30',
+                        routineImage: Image.asset(
+                          'assets/images/cobra-stretch.png',
+                          width: 74,
+                          height: 80,
+                          fit: BoxFit.cover,
                         ),
                       ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 2, 0, 0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Container(
-                              width: MediaQuery.of(context).size.width,
-                              height: 100,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                              ),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            8, 8, 8, 8),
-                                        child: ClipRRect(
-                                          borderRadius:
-                                              BorderRadius.circular(8),
-                                          child: Image.asset(
-                                            'assets/images/chest-stretch.png',
-                                            width: 74,
-                                            height: 80,
-                                            fit: BoxFit.cover,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  Expanded(
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          8, 1, 0, 0),
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Text(
-                                                'Estiramiento de Pecho',
-                                                style: TextStyle(
-                                                  fontFamily: 'Lexend Deca',
-                                                  color: Color(0xFF15212B),
-                                                  fontSize: 20,
-                                                  fontWeight: FontWeight.w500,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                          Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Text(
-                                                '0:30',
-                                                style: TextStyle(
-                                                  fontFamily: 'Lexend Deca',
-                                                  color: Color(0xFF8B97A2),
-                                                  fontSize: 18,
-                                                  fontWeight: FontWeight.normal,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
+                      InfoBoxRoutines(
+                        nameRoutine: 'Estiramiento de Pecho',
+                        timeRoutine: '0:30',
+                        routineImage: Image.asset(
+                          'assets/images/chest-stretch.png',
+                          width: 74,
+                          height: 80,
+                          fit: BoxFit.cover,
                         ),
                       ),
                     ],
