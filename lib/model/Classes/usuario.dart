@@ -1,9 +1,3 @@
-import 'dart:convert';
-import 'dart:ffi';
-
-import 'package:enum_to_string/enum_to_string.dart';
-import 'package:http/http.dart' as http;
-
 enum Goal {
   NONE,
   AUMENTAR_MASA,
@@ -35,61 +29,6 @@ class Usuario {
   PlanType? planType;
   Goal? goal;
 
-  Future<String> userLogin(String correo, String contrasenia) async {
-    var client = http.Client();
-    String salida;
-    try {
-      var request = http.MultipartRequest(
-          'POST', Uri.parse('http://3.137.209.216/DTF-Back/public/api/login'));
-      request.fields.addAll(
-        {'email': correo, 'password': contrasenia},
-      );
-
-      http.StreamedResponse response = await request.send();
-
-      if (response.statusCode == 200) {
-        salida = await response.stream.bytesToString();
-        print(salida);
-        return salida;
-      } else {
-        salida = response.reasonPhrase!;
-        print(response.reasonPhrase);
-      }
-    } finally {
-      client.close();
-    }
-    return 'error';
-  }
-
-  void agregarUsuarioV2(Usuario usuario) async {
-    var client = http.Client();
-    try {
-      var request = http.MultipartRequest('POST',
-          Uri.parse('http://3.137.209.216/DTF-Back/public/api/register'));
-      request.fields.addAll({
-        'name': usuario.getName,
-        'email': usuario.getEmail,
-        'password': usuario.getPassword,
-        'weight': usuario.getWeight.toString(),
-        'height': usuario.getHeight.toString(),
-        'planType': EnumToString.convertToString(PlanType.GRATUITO),
-        'goal': EnumToString.convertToString(usuario.getGoal),
-      });
-
-      http.StreamedResponse response = await request.send();
-
-      if (response.statusCode == 200) {
-        print(await response.stream.bytesToString());
-      } else {
-        print(response.reasonPhrase);
-        client.close();
-        return;
-      }
-    } finally {
-      client.close();
-    }
-  }
-
   //Metodo get y set
   String get getName => name.toString();
   void setName(String value) => name = value;
@@ -111,15 +50,6 @@ class Usuario {
 
   Goal get getGoal => this.goal!;
   void setGoal(Goal value) => this.goal = value;
-
-  factory Usuario.fromJson(Map<String, dynamic> parsedJson) {
-    return Usuario(
-        name: parsedJson['name'],
-        weight: parsedJson['weight'],
-        height: parsedJson['height'],
-        planType: parsedJson['planType'],
-        goal: parsedJson['goal']);
-  }
 
   @override
   String toString() {

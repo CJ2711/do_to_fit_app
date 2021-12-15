@@ -440,20 +440,5 @@ class _BodySignUpState extends State<BodySignUp> {
           });
       return;
     }
-
-    print('INFO DEL USUARIO: ---------------------------');
-    print(widget.user.getEmail +
-        " " +
-        widget.user.getName +
-        " " +
-        widget.user.getPassword +
-        " " +
-        widget.user.getWeight.toString() +
-        " " +
-        widget.user.getHeight.toString() +
-        " " +
-        widget.user.getPlanType.toString() +
-        " " +
-        widget.user.goal.toString());
   }
 }

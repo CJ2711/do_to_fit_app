@@ -189,13 +189,15 @@ class _TestWidgetState extends State<RoutinesDetail> {
                                           Row(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
-                                              Text(
-                                                'Flexiones con Inclinación (Apoyo de Brazos)',
-                                                style: TextStyle(
-                                                  fontFamily: 'Lexend Deca',
-                                                  color: Color(0xFF15212B),
-                                                  fontSize: 20,
-                                                  fontWeight: FontWeight.w500,
+                                              Flexible(
+                                                child: Text(
+                                                  'Flexiones con Inclinación (Apoyo de Brazos)',
+                                                  style: TextStyle(
+                                                    fontFamily: 'Lexend Deca',
+                                                    color: Color(0xFF15212B),
+                                                    fontSize: 20,
+                                                    fontWeight: FontWeight.w500,
+                                                  ),
                                                 ),
                                               ),
                                             ],
@@ -509,13 +511,15 @@ class _TestWidgetState extends State<RoutinesDetail> {
                                           Row(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
-                                              Text(
-                                                'Flexiones con Inclinación (Apoyo de Brazos)',
-                                                style: TextStyle(
-                                                  fontFamily: 'Lexend Deca',
-                                                  color: Color(0xFF15212B),
-                                                  fontSize: 20,
-                                                  fontWeight: FontWeight.w500,
+                                              Flexible(
+                                                child: Text(
+                                                  'Flexiones con Inclinación (Apoyo de Brazos)',
+                                                  style: TextStyle(
+                                                    fontFamily: 'Lexend Deca',
+                                                    color: Color(0xFF15212B),
+                                                    fontSize: 20,
+                                                    fontWeight: FontWeight.w500,
+                                                  ),
                                                 ),
                                               ),
                                             ],

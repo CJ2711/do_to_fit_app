@@ -12,6 +12,7 @@ class Home extends StatelessWidget {
   // final GoogleSignInAccount? user;
   final Usuario usuario;
   const Home({Key? key, required this.usuario}) : super(key: key);
+
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
@@ -46,6 +47,7 @@ class Home extends StatelessWidget {
                   children: [
                     Expanded(
                       child:
+                          //TODO
                           //    Container(
                           //     height: 70,
                           //     decoration: BoxDecoration(
@@ -59,7 +61,15 @@ class Home extends StatelessWidget {
                           Container(
                         child: (Padding(
                           padding: EdgeInsets.fromLTRB(0, 20, 0, 10),
-                          child: Text(usuario.getName),
+                          child: ListView(
+                            children: [
+                              Text(usuario.getName),
+                              Text('Objetivo:  ' +
+                                  usuario.getGoal.toString().substring(5)),
+                              Text('Tipo de Plan:  ' +
+                                  usuario.getPlanType.toString().substring(9)),
+                            ],
+                          ),
                         )),
                       ),
                     ),

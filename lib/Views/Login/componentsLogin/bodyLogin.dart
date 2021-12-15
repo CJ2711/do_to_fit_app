@@ -37,8 +37,8 @@ class _BodyLoginState extends State<BodyLogin> {
 
   @override
   Widget build(BuildContext context) {
+    // TODO
     // Usuario usuario = Usuario();
-
     // Future singInGoogle() async {
     //   final user = await GoogleSignInApi.login();
     //   if (user == null) {
@@ -60,7 +60,6 @@ class _BodyLoginState extends State<BodyLogin> {
     //     ));
     //   }
     // }
-
     Size size = MediaQuery.of(context).size;
     return LoginBC(
       child: SafeArea(
@@ -78,15 +77,6 @@ class _BodyLoginState extends State<BodyLogin> {
                 height: size.height * 0.3,
               ),
               SizedBox(height: size.height * 0.03),
-              // RoundedInputField(
-              //   icon: Icons.person,
-              //   hintText: "Correo Electrónico",
-              //   onChanged: (value) {},
-              // ),
-              // RoundedPasswordField(
-              //   hintText: "Contraseña",
-              //   onChanged: (value) {},
-              // ),
               TextFormField(
                 controller: mailTextController,
                 keyboardType: TextInputType.emailAddress,
@@ -163,13 +153,11 @@ class _BodyLoginState extends State<BodyLogin> {
                   logeo();
                 },
               ),
-
+              //TODO
               //--- Divisor entre "INICIAR SESIÓN" y los Social Login ---/
               // OrDivider(),
               //---------------------------------------------------------/
-
               //--- Fila de botones de inicio de sesión de Google y Facebook  ---/
-
               // Row(
               //   mainAxisAlignment: MainAxisAlignment.center,
               //   children: <Widget>[
@@ -179,7 +167,6 @@ class _BodyLoginState extends State<BodyLogin> {
               //     ),
               //   ],
               // ),
-
               SizedBox(height: size.height * 0.03),
               AccountCheck(
                 press: () {
@@ -207,16 +194,12 @@ class _BodyLoginState extends State<BodyLogin> {
     };
     var res = await CallApi().postData(data, 'login');
     var body = json.decode(res.body);
-    print(body);
     if (body['success'] == false) {
-      // _showMessage(body['message'])
       _showMessage('Correo o contraseña invalida');
     } else {
-      // Usuario user = new Usuario.fromJson(body);
       Usuario user = new Usuario();
       user.setEmail(mailTextController.text.trim());
       user.setPssword(psswrdTextController.text.trim());
-      // print(user);
       user.setName(body['user']['name']);
       user.setHeight((body['user']['height']).toString());
       user.setWeight((body['user']['weight']).toString());
@@ -224,7 +207,7 @@ class _BodyLoginState extends State<BodyLogin> {
           PlanType.values, (body['user']['planType']))!);
       user.setGoal(
           EnumToString.fromString(Goal.values, (body['user']['goal']))!);
-      // print(EnumToString.fromString(Goal.values, (body['Goal']).toString()));
+
       Navigator.push(
         context,
         MaterialPageRoute(
@@ -237,7 +220,6 @@ class _BodyLoginState extends State<BodyLogin> {
   }
 
   _showMessage(msg) {
-    //
     final snackBar = SnackBar(
       content: Text(msg),
       action: SnackBarAction(
