@@ -1,26 +1,25 @@
 import 'package:do_to_fit_app/Views/Home/routines_detail.dart';
 import 'package:flutter/material.dart';
 
-class Routines extends StatefulWidget {
-  const Routines({Key? key}) : super(key: key);
+class Diets extends StatefulWidget {
+  const Diets({Key? key}) : super(key: key);
 
   @override
   _RutinesWidgetState createState() => _RutinesWidgetState();
 }
 
-class _RutinesWidgetState extends State<Routines> {
+class _RutinesWidgetState extends State<Diets> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
-    //TODO: Acomodar esto en Widgets individuales para eficiencia de código.
     return Scaffold(
       key: scaffoldKey,
       appBar: AppBar(
         backgroundColor: Colors.lightBlue.shade500,
         automaticallyImplyLeading: true,
         title: Text(
-          'Rutinas',
+          'Dietas',
           style: TextStyle(
             fontFamily: 'Lexend Deca',
             color: Colors.white,
