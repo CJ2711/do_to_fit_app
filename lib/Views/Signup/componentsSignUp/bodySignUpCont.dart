@@ -103,7 +103,7 @@ class _BodySignUpContState extends State<BodySignUpCont> {
     var body = json.decode(res.body);
     if (body['success'] == false) {
       // _showMessage('Error al cargar los datos. Vuelve a intentarlo.');
-      _showMessage(body['message']);
+      _showMessage((body['validator']['email']).toString());
     } else {
       showDialog(
         context: context,
